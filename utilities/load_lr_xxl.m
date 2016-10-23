@@ -1,4 +1,5 @@
-% Loads Kebi Label Ranking datasets which are provided in XXL format.
+function [features, rankings] = load_lr_xxl(filename)
+% LOAD_LR_XXL Loads Kebi Label Ranking datasets which are provided in XXL format.
 % XXL is a Java library created by the Seeger group from the university of
 % Marburg.
 %
@@ -10,8 +11,8 @@
 %      rankings - an NxM matrix of rankings (row wise), NOT orderings
 %
 % Example: [features, rankings] = load_lr_xxl('data/iris_dense.txt')
-% 2014-12, disc
-function [features, rankings] = load_lr_xxl(filename)
+% (C) 2014, D. Schaefer
+
     impdata=importdata(filename);
     hstr = impdata.textdata{1};
     posL = findstr(hstr,'L');

@@ -1,8 +1,8 @@
 function [ X ] = convertCDR2netpldata( InstanceFeatures, LabelFeatures, LabelOrderings )
-%CONVERT2NETPLDATA Converts contextual dyad ranking data to the NetPL data
+%CONVERT2NETPLDATA Converts contextual dyad ranking data to the PLNet data
 %format.
 %
-%   NetPL data can be fed into the NetPL method either as training data
+%   PLNet data can be fed into the NetPL method either as training data
 %   or as test data. In the latter case the data is used to produce utility
 %   scores.
 %

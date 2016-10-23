@@ -1,11 +1,18 @@
-% Kendall's tau Implementation
-% -> same results like corr(p_ranking,sampleGTLabels','type','Kendall');
-%
-% Note (DS), 2014-01-13
-% This is not kendall's tau distance.
-% This implementation is th Kendall tau rank correlation coefficient
-% see http://en.wikipedia.org/wiki/Kendall_tau_rank_correlation_coefficient
 function [kendall]=mykendall(pi,sigma)  
+%MYKENDALL Kendall's tau rank correlation coefficient
+% Calculates the kendall tau rank correlation, c.f.    
+% http://en.wikipedia.org/wiki/Kendall_tau_rank_correlation_coefficient
+% Note: this is NOT kendall's tau distance.
+%
+%   Inputs:
+%       pi      - permutation as a 1xp row vector
+%       sigma   - permutation as a 1xp row vector
+%  
+%   Outputs:
+%       kendall - real value
+%
+%   (C) 2014 Dirk Schaefer 
+
     M=length(pi);
     C=0;
     D=0;

@@ -3,9 +3,12 @@ function [rankings]= getRankings(orderings)
 %   Input:
 %       orderings - matrix of row vectors. A row corresponds to a single
 %       ordering.
-%  (C) D.S.
-% Changelog:
-%   2016-04 - doc improved
+%
+%   Output:
+%       rankings - matrix of row vectors. A row correspons to a ranking.
+%
+% (C) 2016, Dirk Schaefer
+
     [numInst,numLabels] = size(orderings);
     rankings = zeros(numInst,numLabels);
     for j=1:numInst
